@@ -9,6 +9,5 @@ import com.p3springboot.model.UserEntity;
 
 @Repository
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
-
     Optional<UserEntity> findByEmail(String email);
 }

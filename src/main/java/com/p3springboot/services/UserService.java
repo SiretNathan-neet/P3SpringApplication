@@ -1,6 +1,7 @@
 package com.p3springboot.services;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class UserService {
 
     public UserEntity registerUser(String email, String name,String password) {
         if (userRepository.findByEmail(email).isPresent()) {
-            return null; // User already exists
+            return null;
         }
 
         UserEntity user = new UserEntity();
@@ -36,5 +37,13 @@ public class UserService {
 
     public UserEntity findByEmail(String email) {
         return userRepository.findByEmail(email).orElse(null);
+    }
+
+    public Optional<UserEntity> findById(int id) {
+        return userRepository.findById((long)id);
+    }
+
+    public Object getUserById(int userId) {
+        throw new UnsupportedOperationException("Unimplemented method 'getUserById'");
     }
 }

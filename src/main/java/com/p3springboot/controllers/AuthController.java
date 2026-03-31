@@ -51,7 +51,7 @@ public class AuthController {
             )
         );
         String token = jwtService.generateToken(authentication);
-        System.out.println("Generated Token : " + token); //Log temporaire pour vérifier la génération du token
+
         return ResponseEntity.ok(new AuthenticationResponse(token));
     }
 

@@ -91,7 +91,7 @@ The frontend will be accessible at `http://localhost:4200`
 ## Technologies used
 
 - Spring Boot 4.0.1
-- Spring Security with JWT
+- Spring Security with JWT  
 - MySQL
 - Lombok
 - SpringDoc OpenAPI (Swagger)

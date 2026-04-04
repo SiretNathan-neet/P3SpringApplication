@@ -43,7 +43,7 @@ public class MessageController {
             return ResponseEntity.status(401).build();
         }
 
-        if (user.getId() != request.user_id()) {
+        if (user.getId() != (long) request.user_id()) {
             return ResponseEntity.status(403).build();
         }
 
